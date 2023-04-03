@@ -31,8 +31,6 @@ Route::get('student', [StudentController::class, 'index']);
 
 Route::get('student/create', [StudentController::class, 'create']);
 
-Route::get('student/{id}/show', [StudentController::class, 'show']);
-
 Route::post('student', [StudentController::class, 'store']);
 
 Route::delete('student/{id}', [StudentController::class, 'destroy']);
