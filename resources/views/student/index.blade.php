@@ -4,6 +4,7 @@
 
 @section('content')
 
+<div class="col-sm-auto col-md-auto mx-auto mx-lg-auto mx-md-auto mx-sm-auto">
     <table class="table">
         <thead>
             <tr>
@@ -42,5 +43,6 @@
                 </tr>
             @endforeach
         </tbody>
+    </div>
 
     @endsection
