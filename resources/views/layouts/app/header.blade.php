@@ -1,4 +1,4 @@
-<header class="text-bg-dark d-flex justify-content-center py-3">
+<header class="text-bg-dark d-flex justify-content-center py-3 bg-gradient">
     <div class="container">
         <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
 
