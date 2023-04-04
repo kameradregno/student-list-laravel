@@ -14,12 +14,12 @@
                         <h4 class="mb-4">Login</h4>
                         
                         @if (session()->has('error_alert'))
-                            <div class="alert alert-dark bg-dark text-light bg-gradient rounded-0">
+                            <div class="alert alert-dark bg-dark text-light bg-gradient text-center rounded-0">
                                 {{ session()->get('error_alert') }}</div>
                         @endif
 
                         @if (session()->has('alert_msg'))
-                            <div class="alert alert-dark bg-dark text-light bg-gradient rounded-0">
+                            <div class="alert alert-dark bg-dark text-light bg-gradient text-center rounded-0">
                                 {{ session()->get('alert_msg') }}</div>
                         @endif
 
