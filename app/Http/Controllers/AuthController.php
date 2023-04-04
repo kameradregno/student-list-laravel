@@ -26,7 +26,7 @@ class AuthController extends Controller
         if (Auth::attempt($credential)) {
             return redirect('student');
         } else {
-            return redirect('login');
+            return redirect('login')->with('error_alert', 'Email atau password salah');
         }
     }
 
@@ -36,7 +36,7 @@ class AuthController extends Controller
         Session::flush();
         Auth::logout();
 
-        return redirect('login');
+        return redirect('login')->with('alert_msg', 'Anda sudah logout, silahkan login kembali');
 
     }
 
