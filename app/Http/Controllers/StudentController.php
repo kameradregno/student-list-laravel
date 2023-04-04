@@ -52,14 +52,14 @@ class StudentController extends Controller
             return redirect('login');
         }
 
+        // $nama = $request->input('nama');
+        // $kelas = $request->input('kelas');
 
-
-        $nama = $request->input('nama');
-        $kelas = $request->input('kelas');
+  
 
         Students::create([
-            'nama' => $nama,
-            'kelas' => $kelas,
+            'nama' =>  $request->input('nama'),
+            'kelas' =>  $request->input('kelas'),
         ]);
 
         return redirect('student'); 
@@ -113,12 +113,12 @@ class StudentController extends Controller
         }
 
 
-        $nama = $request->input('nama');
-        $kelas = $request->input('kelas');
+        // $nama = $request->input('nama');
+        // $kelas = $request->input('kelas');
 
         Students::where('id', $id)->update([
-            'nama' => $nama,
-            'kelas' => $kelas,
+            'nama' => $request->input('nama'),
+            'kelas' => $request->input('kelas'),
         ]);
 
         return redirect('student');

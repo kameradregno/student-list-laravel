@@ -13,10 +13,12 @@ class AuthController extends Controller
 {
     public function login()
     {
-
-        return view('auth.login');
-
-
+        if (Auth::check()) {
+            return redirect('student');
+        } else {
+            return view('auth.login');
+        }
+        
     }
 
     public function authenticate(Request $request)
@@ -43,7 +45,12 @@ class AuthController extends Controller
     public function register_form()
     {
 
-        return view('auth.register');
+        if (Auth::check()) {
+            return redirect('student');
+        } else {
+            return view('auth.register');
+        }
+        
 
     }
 
